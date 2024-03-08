@@ -2,6 +2,6 @@ import java.util.Collection;
 
 public interface PegGame{
     Collection<Move> getPossibleMove();
-    PegGameState getGameState();
+    GameState getGameState();
     void makeMove(Move move) throws PegGameException;
 }

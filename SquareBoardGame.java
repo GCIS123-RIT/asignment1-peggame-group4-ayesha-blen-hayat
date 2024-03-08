@@ -87,21 +87,21 @@ public class SquareBoardGame implements PegGame {
         return counter > 0;
     }
 
-    public PegGameState getGameState() {
+    public GameState getGameState() {
         int Count = countPegs();
         if (!hasMoved()) {
-            return PegGameState.NOT_STARTED;
+            return GameState.NOT_STARTED;
         } else if (Count > 1) {
             for (int i = 0; i < size; i++) {
                 for (int j = 0; j < size; j++) {
                     if (getPossibleMove().size() != 0) {
-                        return PegGameState.IN_PROGRESS;
+                        return GameState.IN_PROGRESS;
                     }
                 }
             }
-            return PegGameState.STALEMATE;
+            return GameState.STALEMATE;
         } else if (Count == 1) {
-            return PegGameState.WON;
+            return GameState.WON;
         }
         return null;
     }

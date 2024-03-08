@@ -43,7 +43,7 @@ public class PegGameCLI {
                         System.out.println("Move successful!");
                         System.out.println(game.toString());
     
-                        if (game.getGameState() == PegGameState.STALEMATE || game.getGameState() == PegGameState.WON) {
+                        if (game.getGameState() == GameState.STALEMATE || game.getGameState() == GameState.WON) {
                             System.out.println("Game Over: " + game.getGameState());
                             gamePlay = false;
                         }
